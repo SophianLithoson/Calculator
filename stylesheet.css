@@ -1,19 +1,22 @@
 body {
     background-color: lightskyblue;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 #title-text {
-    font-size: large;
+    font-size: larger;
     font-weight: bold;
     color: rgb(37, 37, 37);
+    margin-bottom: 20px;
 }
 
 .calc-body {
     background-color: darkgray;
-    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 15px;
 }
 
 .display-area {
@@ -21,6 +24,7 @@ body {
     color: black;
     text-align: right;
     font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
     padding: 10px;
     width: 400px;
 }
@@ -30,12 +34,16 @@ body {
     height: 500px;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 70px;
 }
 
 .calc-button {
+    display: flex;
     box-sizing: border-box;
     border: 10px solid darkgray;
     background-color: rgb(102, 102, 102);
+    justify-content: center;
+    align-items: center;
     width: 100px;
     height: 100px;
     color: white;
