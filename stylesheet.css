@@ -24,9 +24,9 @@ body {
     color: black;
     text-align: right;
     font-family: 'Courier New', Courier, monospace;
-    box-sizing: border-box;
     padding: 10px;
-    width: 300px;
+    width: 290px;
+    height: 1em;
 }
 
 .button-area {
