@@ -49,6 +49,9 @@ var lastOperator = "=";
         let inputAction = opBut.textContent;
         console.log(inputAction);
 
+        if ((currentTotal === "" || currentTotal === "DIVZERO") && newNumber === "")
+            return;
+        
         switch (inputAction) {
             case "C":
                 currentTotal = "";
@@ -73,7 +76,7 @@ var lastOperator = "=";
                 if (lastOperator === "=" || currentTotal === "DIVZERO")
                     currentTotal = newNumber;
                 else
-                    currentTotal = operate(+currentTotal, inputAction, +newNumber);
+                    currentTotal = operate(+currentTotal, lastOperator, +newNumber);
                 
                 lastOperator = inputAction;
                 newNumber = "";
@@ -105,6 +108,6 @@ function operate(firstNum, operator, secondNum) {
 }
 
 function updateDisplay() {
-    expressionArea.textContent = currentTotal;
+    expressionArea.textContent = currentTotal + lastOperator;
     resultArea.textContent = newNumber;
 }
