@@ -14,10 +14,14 @@ var lastOperator = "=";
     digBut.addEventListener("click", () => {
         let inputDigit = digBut.textContent;
         console.log(inputDigit);
-
+        
         switch (inputDigit) {
             case ".":
-                if (!decimalExists) {
+                if (newNumber.length >= 28) {
+                    console.log("input number at character limit if decimal included");
+                    return;
+                }
+                else if (!decimalExists) {
                     newNumber += inputDigit;
                     decimalExists = true;
                 }
@@ -38,6 +42,10 @@ var lastOperator = "=";
                     newNumber = newNumber.slice(1);
                 break;
             default:
+                if (newNumber.length >= 29) {
+                    console.log("input number at character limit");
+                    return;
+                }
                 newNumber += inputDigit;
         }
         updateDisplay();
