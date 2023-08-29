@@ -48,3 +48,8 @@ body {
     height: 75px;
     color: white;
 }
+
+div.calc-button:hover {
+    background-color: rgb(88, 88, 88);
+    border: 1px solid black
+}
